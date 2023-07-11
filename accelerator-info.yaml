@@ -1,0 +1,22 @@
+id: f1d94cae-d2a0-4806-9d84-87d19ff66623
+timestamp: 2023-07-11T09:19:52Z
+username: guest
+source: TAP-GUI
+accelerator:
+  name: csharp-rest-service
+  source:
+    image: us-central1-docker.pkg.dev/tap-sandbox-dev/tap-bits/tap-packages@sha256:24f69fa264ac016b531ec074d407b9ba6f22b77152b52582343a8fdd92ccae04
+fragments:
+  - name: steeltoe-postgresql
+    source:
+      image: us-central1-docker.pkg.dev/tap-sandbox-dev/tap-bits/tap-packages@sha256:e82638d1412409c4944ebeb2bfcfcb0d762a4adb323e9fda9cd8d7e7b00551cf
+  - name: tap-workload
+    source:
+      image: us-central1-docker.pkg.dev/tap-sandbox-dev/tap-bits/tap-packages@sha256:dbf0dedb6848ad8a7704c1c19465a1ddae9039b0e63c1dd0df3e2ed9cbda6093
+options:
+  applicationName: CustomerProfileAPI
+  databaseName: customer-database
+  databasePostgresStorageClass: default
+  databaseType: postgres
+  exposeOpenAPIEndpoint: false
+  projectName: csharp-rest-service

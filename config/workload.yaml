@@ -28,10 +28,9 @@ spec:
       url: https://github.com/omocquais-p/csharp-rest-service.git
       ref:
         branch: master
-
   serviceClaims:
     - name: database
       ref:
         apiVersion: services.apps.tanzu.vmware.com/v1alpha1
-        kind: ResourceClaim
-        name: customer-database-claim
+        kind: ClassClaim
+        name: postgres-ms
